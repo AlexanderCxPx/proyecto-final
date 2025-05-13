@@ -1,0 +1,277 @@
+/* Reset básico */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.barra-superior {
+  background-color: black;
+  transition: background-color 0.3s ease;
+}
+
+.barra-superior:hover {
+  background-color: #b10000; /* rojo universitario */
+}
+
+
+/* Enlaces del navbar */
+.nav-link {
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #b10000 !important;
+}
+
+.buscador-navbar:focus {
+  border-color: #cccccc !important; /* borde plomo claro */
+  box-shadow: 0 0 0 0.2rem rgba(204, 204, 204, 0.5) !important; /* sombra ligera */
+  outline: none !important;
+}
+
+.form-control:focus {
+  border-color: #b10000;
+  box-shadow: 0 0 0 0.2rem rgba(177, 0, 0, 0.25); /* sombra roja tenue */
+  outline: none;
+}
+
+.list-group-item {
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.list-group-item:hover {
+  background-color: #b10000 !important;
+  color: white !important;
+}
+
+/* Eliminar highlight azul al hacer focus */
+.list-group-item:focus {
+  background-color: white !important;
+  color: black !important;
+  outline: none !important;
+}
+
+/* Evita que los NavLink del buscador muestren el azul al enfocarse automáticamente */
+.sugerencia-producto:focus,
+.sugerencia-producto:focus-visible,
+.sugerencia-producto:focus-within {
+  background-color: white !important;
+  color: black !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.sugerencia-producto:hover {
+  background-color: #b10000 !important;
+  color: white !important;
+}
+
+/* Estilo base para la X negra */
+input[type="search"]::-webkit-search-cancel-button {
+  appearance: none;
+  -webkit-appearance: none;
+  height: 1em;
+  width: 1em;
+  background: url("data:image/svg+xml;utf8,<svg viewBox='0 0 24 24' fill='black' xmlns='http://www.w3.org/2000/svg'><path d='M18 6L6 18M6 6l12 12' stroke='%23000' stroke-width='2' stroke-linecap='round'/></svg>") no-repeat center;
+  background-size: contain;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+/* Cambio de color solo cuando el mouse está sobre la X */
+input[type="search"]::-webkit-search-cancel-button:hover {
+  background: url("data:image/svg+xml;utf8,<svg viewBox='0 0 24 24' fill='red' xmlns='http://www.w3.org/2000/svg'><path d='M18 6L6 18M6 6l12 12' stroke='%23b10000' stroke-width='2' stroke-linecap='round'/></svg>") no-repeat center;
+  background-size: contain;
+}
+
+.nav-icon {
+  color: #000;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-icon:hover {
+  color: #b10000;
+}
+
+/* opcional: ícono activo también en rojo */
+.nav-link.active .nav-icon {
+  color: #b10000;
+}
+
+/* Estado activo en el navbar (excepto home) */
+.activo-u {
+  color: #b10000 !important;
+  font-weight: bold;
+}
+
+/* Íconos del footer */
+.footer-link {
+  display: inline-block;
+  font-size: 1.5rem;
+  color: white;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-link:hover {
+  transform: scale(1.2);
+  color: #b10000;
+}
+
+/* Imágenes destacadas (home) */
+.destacada-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 450px; /* 🔁 Altura restaurada */
+}
+
+.destacada-wrapper img {
+  transition: transform 0.4s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.destacada-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 0.4s ease;
+  z-index: 1;
+}
+
+.destacada-wrapper:hover img {
+  transform: scale(1.05);
+}
+
+.destacada-wrapper:hover::after {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+/* Botón rojo universitario */
+.btn-u {
+  background-color: #b10000 !important;
+  color: #fff !important;
+  border: none !important;
+  transition: background-color 0.3s ease;
+}
+
+.btn-u:hover {
+  background-color: #8e0000 !important;
+}
+
+/* Imagen dentro de cards */
+.card-img-top {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+  padding: 4px;
+}
+
+/* Cuerpo de tarjetas y ajuste de espacio */
+.card-body {
+  padding-bottom: 0.25rem !important;
+}
+
+.card {
+  margin-bottom: 0 !important;
+}
+
+/* Imagen destacada para productos en Home */
+.img-home-producto {
+  height: 405px; /* 1.35 * 300px */
+  object-fit: contain;
+}
+
+/* Fondo de sección de productos destacados */
+.bg-productos-destacados {
+  background-image: url('/imagenes/bg-productos-destacados.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Efecto de zoom al pasar el mouse en productos */
+.img-zoom-wrapper {
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.img-zoom-wrapper img {
+  transition: transform 0.3s ease;
+}
+
+.img-zoom-wrapper img:hover {
+  transform: scale(1.05);
+}
+
+.visita {
+  height: 350px;
+  position: relative;
+  overflow: hidden;
+}
+
+.visita {
+  height: 350px;
+  position: relative;
+  overflow: hidden;
+}
+
+.visita img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.visita:hover img {
+  transform: scale(1.1);
+}
+
+.visita-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.35), rgba(0,0,0,1));
+  transition: background 0.4s ease;
+  z-index: 1;
+}
+
+.visita:hover .visita-overlay {
+  background: linear-gradient(to bottom, rgba(56, 56, 56, 0.35), rgba(56,56,56,1));
+}
+
+.visita-texto {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #EEECD7;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  z-index: 2;
+  text-align: center;
+  line-height: 1.2;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6); /* ✅ sombra */
+}
+
+.visita-subtexto {
+  font-size: 1rem; /* 🔼 ligeramente más grande */
+  font-weight: normal;
+  text-transform: none;
+  letter-spacing: normal;
+  color: #EEECD7;
+  margin-top: 10px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* ✅ sombra */
+}
