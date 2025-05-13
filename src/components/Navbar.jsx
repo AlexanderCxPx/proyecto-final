@@ -30,7 +30,6 @@ function Navbar() {
 
   return (
     <>
-        {/* Barra superior */}
         <a
         href="https://socioadherente.universitario.pe/login"
         className="barra-superior text-white text-center py-1 w-100 d-block text-decoration-none"
@@ -39,7 +38,6 @@ function Navbar() {
         <strong>🏆 ¡HÁZTE SOCIO, BICAMPEÓN! 🏆</strong>
         </a>
 
-      {/* Navbar principal */}
       <nav className="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm w-100 sticky-top">
         <div className="d-flex justify-content-between align-items-center w-100 px-4">
           {/* Parte izquierda */}
@@ -66,7 +64,6 @@ function Navbar() {
             </ul>
           </div>
 
-          {/* Buscador + Iconos */}
           <div className="d-flex align-items-center gap-3 ms-auto position-relative">
             <div className="position-relative w-100" style={{ minWidth: '200px' }}>
               <input

@@ -10,7 +10,6 @@ function Home() {
 
   return (
     <>
-      {/* Fila de imágenes principales */}
       <div className="row g-0 w-100 mx-0">
         <div className="col-md-4 p-0">
           <div className="destacada-wrapper">
@@ -29,7 +28,6 @@ function Home() {
         </div>
       </div>
 
-      {/* Grid de productos destacados con fondo */}
       <div className="w-100 bg-productos-destacados py-3">
         <div className="container">
           <div className="row">
@@ -64,7 +62,6 @@ function Home() {
         </div>
       </div>
 
-      {/* Sección de dos imágenes con enlaces, overlay y texto */}
       <div className="row g-0 w-100 mx-0">
         <div className="col-md-6 p-0">
           <a
